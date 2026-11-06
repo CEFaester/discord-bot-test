@@ -1,4 +1,7 @@
 require('dotenv').config();
+const http = require('http');
+http.createServer((req, res) => res.end('Discord bot is online!')).listen(process.env.PORT || 3000);
+
 const { Client, GatewayIntentBits } = require('discord.js');
 
 // Opsæt klienten
