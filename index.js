@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
 
 // Opsæt klienten
@@ -108,5 +109,4 @@ client.on('messageCreate', async (message) => {
     }
 });
 
-// Indsæt dit nye token her
-client.login('MTU2MzI2MzM5MDA5NTM4NDY4OQ.GViYi3.KpTl6jIMsemj6WDfIWpO1bSFzxpDVQf7wMnZDU');
+client.login(process.env.DISCORD_TOKEN);
